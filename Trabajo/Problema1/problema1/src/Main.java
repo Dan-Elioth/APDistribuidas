@@ -1,6 +1,7 @@
+package Trabajo.Problema1.problema1.src;
+
 import java.util.ArrayList;
 import java.util.List;
-
 
 
 class Trabajador {
@@ -55,7 +56,7 @@ public class Main {
 
 
 
-        // System.out.println(" ");
+         System.out.println(" ");
 
          tiempoInicio = System.nanoTime();
          listaTrabajadores.stream()
@@ -70,5 +71,3 @@ public class Main {
 
 
 }
-
-
