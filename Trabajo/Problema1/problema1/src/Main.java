@@ -25,7 +25,7 @@ class Trabajador {
 public class Main {
 
     public static void main(String[] args) {
-        // Creamos una lista de trabajadores con su nombre y sueldo
+        // Lista de trabajadores con su nombre y sueldo
         List<Trabajador> listaTrabajadores = new ArrayList<>();
         listaTrabajadores.add(new Trabajador("Juan", 4000));
         listaTrabajadores.add(new Trabajador("Maria", 5500));
@@ -55,8 +55,8 @@ public class Main {
         System.out.print(" tiempo con paralelo "+(tiempoFin-tiempoInicio));
 
 
-
          System.out.println(" ");
+
 
          tiempoInicio = System.nanoTime();
          listaTrabajadores.stream()
