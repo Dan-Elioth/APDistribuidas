@@ -36,36 +36,30 @@ public class Main {
         listaTrabajadores.add(new Trabajador("Pedro", 5200));
         listaTrabajadores.add(new Trabajador("Joel", 5200));
         listaTrabajadores.add(new Trabajador("Luis", 5200));
-        listaTrabajadores.add(new Trabajador("Dan", 5200));
-        listaTrabajadores.add(new Trabajador("Fonsi", 5200));
-        listaTrabajadores.add(new Trabajador("Jhon", 5200));
-        listaTrabajadores.add(new Trabajador("Lance", 5200));
-        listaTrabajadores.add(new Trabajador("Hugo", 5200));
 
         
-        // Utilizamos programación paralela para imprimir los nombres de los trabajadores con sueldo mayor a 5000
+        // imprimir los nombres de los trabajadores con sueldo mayor a 5000
 
         long tiempoInicio = System.nanoTime();
-        listaTrabajadores.stream()
-                        .parallel()
+        listaTrabajadores.stream().parallel()
                         .filter(t -> t.getSueldo() > 5000)
                         .forEach(t -> System.out.println(t.getNombre()));
-        long tiempoFin = System.nanoTime();
-        System.out.println();
+         long tiempoFin = System.nanoTime();
+         System.out.println();
         System.out.print(" tiempo con paralelo "+(tiempoFin-tiempoInicio));
 
 
-         System.out.println(" ");
-
-
-         tiempoInicio = System.nanoTime();
-         listaTrabajadores.stream()
-                         .filter(t -> t.getSueldo() > 5000)
-                         .forEach(t -> System.out.println(t.getNombre()));
-          tiempoFin = System.nanoTime();
          System.out.println();
-        System.out.print(" tiempo sin paralelo "+(tiempoFin-tiempoInicio));
+         System.out.println("---------------------------------");
 
+
+          tiempoInicio = System.nanoTime();
+          listaTrabajadores.stream()
+                         .filter(t -> t.getSueldo() > 5000)
+                          .forEach(t -> System.out.println(t.getNombre()));
+          tiempoFin = System.nanoTime();
+          System.out.println();
+         System.out.print(" tiempo sin paralelo "+(tiempoFin-tiempoInicio));
     }
 
 
